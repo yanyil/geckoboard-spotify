@@ -8,5 +8,7 @@ gem 'rufus-scheduler'
 
 group :test do
   gem 'rspec'
+  gem 'rake'
+  gem 'coveralls', require: false
   gem 'webmock'
 end
