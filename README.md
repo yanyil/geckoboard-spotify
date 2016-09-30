@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/yyl29/geckoboard-spotify.svg?branch=master)](https://travis-ci.org/yyl29/geckoboard-spotify) [![Coverage Status](https://coveralls.io/repos/github/yyl29/geckoboard-spotify/badge.svg?branch=master)](https://coveralls.io/github/yyl29/geckoboard-spotify?branch=master)
 
-A [Geckoboard](https://www.geckoboard.com/) integration using the [Spotify API](https://developer.spotify.com/web-api/). It allows users to monitor data of a Spotify artist.
+A [Geckoboard](https://www.geckoboard.com/) integration using the [Spotify API](https://developer.spotify.com/web-api/) that allows users to monitor data of a Spotify artist. It pulls data from Spotify API and pushes that data to [Geckoboard Datasets API](https://developer.geckoboard.com/api-reference/ruby/) at a regular interval.
 
 [Dashboard sharing link](https://yanyili.geckoboard.com/dashboards/DDB34472BE57CCE3)
 
@@ -30,7 +30,7 @@ COUNTRY = "GB" # Country code for top tracks
 UPDATE_INTERVAL = '10m' # Geckoboard update interval
 ```
 
-The artist id can be found in the url address of the artist's page. E.g. `43ZHCT0cAZBISjO8DG9PnE` for Elvis Presley(https://open.spotify.com/artist/43ZHCT0cAZBISjO8DG9PnE).
+The artist id can be found in the url address of the artist's Spotify page. E.g. `43ZHCT0cAZBISjO8DG9PnE` for Elvis Presley(https://open.spotify.com/artist/43ZHCT0cAZBISjO8DG9PnE).
 
 The country code is an [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
