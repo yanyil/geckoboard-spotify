@@ -3,11 +3,12 @@ require 'rufus-scheduler'
 require_relative 'lib/geckoboard_request'
 require_relative 'lib/spotify'
 
-API_KEY = Dotenv.load['GECKOBOARD_API_KEY']
+GECKOBOARD_API_KEY = Dotenv.load['GECKOBOARD_API_KEY']
 ARTIST_ID = "43ZHCT0cAZBISjO8DG9PnE"
-INTERVAL = '2s'
+COUNTRY = "GB"
+UPDATE_INTERVAL = "10m"
 
-gecko = GeckoboardRequest.new(API_KEY)
+gecko = GeckoboardRequest.new(GECKOBOARD_API_KEY)
 spotify = Spotify.new(ARTIST_ID)
 scheduler = Rufus::Scheduler.new
 
@@ -26,9 +27,9 @@ top_tracks_fields = [
   Geckoboard::StringField.new(:track, name: 'Track'),
   Geckoboard::NumberField.new(:popularity, name: 'Popularity'),
 ]
-top_tracks_data = spotify.get_top_tracks("GB")
+top_tracks_data = spotify.get_top_tracks(COUNTRY)
 
-scheduler.every INTERVAL do
+scheduler.every UPDATE_INTERVAL do
   gecko.update("artist", artist_fields, artist_data)
   gecko.update("top_tracks", top_tracks_fields, top_tracks_data)
   puts "Data added"
