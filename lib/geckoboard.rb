@@ -1,8 +1,8 @@
 require 'geckoboard'
 require 'dotenv'
-Dotenv.load
+require_relative 'spotify'
 
-API_KEY = ENV['GECKOBOARD_API_KEY']
+API_KEY = Dotenv.load['GECKOBOARD_API_KEY']
 client = Geckoboard.client(API_KEY)
 client.ping
 
@@ -11,9 +11,12 @@ dataset = client.datasets.find_or_create('artist', fields: [
   Geckoboard::NumberField.new(:popularity, name: 'Popularity'),
 ])
 
+ARTIST_ID = "43ZHCT0cAZBISjO8DG9PnE"
+spotify = Spotify.new(ARTIST_ID)
+
 dataset.put([
   {
-    followers: 1000000,
-    popularity: 50
+    followers: spotify.get_followers,
+    popularity: spotify.get_popularity
   },
 ])

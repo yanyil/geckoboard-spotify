@@ -1,0 +1,29 @@
+{
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/artist/43ZHCT0cAZBISjO8DG9PnE"
+  },
+  "followers" : {
+    "href" : null,
+    "total" : 1205074
+  },
+  "genres" : [ "adult standards", "brill building pop", "christmas", "classic rock", "folk rock", "mellow gold", "rock", "rock-and-roll", "rockabilly", "singer-songwriter", "soul" ],
+  "href" : "https://api.spotify.com/v1/artists/43ZHCT0cAZBISjO8DG9PnE",
+  "id" : "43ZHCT0cAZBISjO8DG9PnE",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/160c941240375cecbdebfe61033e59783c5172ab",
+    "width" : 640
+  }, {
+    "height" : 320,
+    "url" : "https://i.scdn.co/image/4e6bf82acdc3e175e06e902f5c1b32eaab2fe0c0",
+    "width" : 320
+  }, {
+    "height" : 160,
+    "url" : "https://i.scdn.co/image/e3e5fd6d8a70dc5f94438fbe880fb1a8844026c4",
+    "width" : 160
+  } ],
+  "name" : "Elvis Presley",
+  "popularity" : 76,
+  "type" : "artist",
+  "uri" : "spotify:artist:43ZHCT0cAZBISjO8DG9PnE"
+}
